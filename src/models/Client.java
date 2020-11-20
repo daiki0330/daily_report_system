@@ -35,7 +35,7 @@ public class Client {
 
     @ManyToOne
     @JoinColumn(name = "employee_id", nullable = false)
-    private Employee employee_id;
+    private Employee employee;
 
     @Column(name = "client_date", nullable = false)
     private Date client_date;
@@ -64,12 +64,12 @@ public class Client {
         this.id = id;
     }
 
-    public Employee getEmployee_id() {
-        return employee_id;
+    public Employee getEmployee() {
+        return employee;
     }
 
-    public void setEmployee_id(Employee employee_id) {
-        this.employee_id = employee_id;
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 
     public Date getClient_date() {
