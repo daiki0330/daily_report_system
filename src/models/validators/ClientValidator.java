@@ -9,9 +9,9 @@ public class ClientValidator {
     public static List<String> validate(Client c) {
         List<String> errors = new ArrayList<String>();
 
-        String title_error = _validateTitle(c.getTitle());
-        if(!title_error.equals("")) {
-            errors.add(title_error);
+        String company_name_error = _validateTitle(c.getCompany_name());
+        if(!company_name_error.equals("")) {
+            errors.add(company_name_error);
         }
 
         String content_error = _validateContent(c.getContent());

@@ -1,5 +1,6 @@
 package models;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 import javax.persistence.Column;
@@ -34,10 +35,10 @@ public class Client {
 
     @ManyToOne
     @JoinColumn(name = "employee_id", nullable = false)
-    private Employee employee;
+    private Employee employee_id;
 
     @Column(name = "client_date", nullable = false)
-    private String title;
+    private Date client_date;
 
     @Column(name = "company_name", length = 255, nullable = false)
     private String company_name;
@@ -63,20 +64,20 @@ public class Client {
         this.id = id;
     }
 
-    public Employee getEmployee() {
-        return employee;
+    public Employee getEmployee_id() {
+        return employee_id;
     }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
+    public void setEmployee_id(Employee employee_id) {
+        this.employee_id = employee_id;
     }
 
-    public String getTitle() {
-        return title;
+    public Date getClient_date() {
+        return client_date;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setClient_date(Date client_date) {
+        this.client_date = client_date;
     }
 
     public String getCompany_name() {
@@ -118,4 +119,5 @@ public class Client {
     public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
+
 }
