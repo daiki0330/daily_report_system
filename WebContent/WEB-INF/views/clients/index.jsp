@@ -12,16 +12,16 @@
         <table id="client_list">
             <tbody>
                 <tr>
-                    <th class="client_name">会社名</th>
+                    <th class="client_name">氏名</th>
                     <th class="client_date">日付</th>
-                    <th class="client_title">タイトル</th>
+                    <th class="client_title">会社名</th>
                     <th class="client_action">操作</th>
                 </tr>
                 <c:forEach var="client" items="${clients}" varStatus="status">
                     <tr class="row${status.count % 2}">
-                        <td class="client_name"><c:out value="${client.company_name}" /></td>
+                        <td class="client_name"><c:out value="${client.employee.name}" /></td>
                         <td class="client_date"><fmt:formatDate value='${client.client_date}' pattern='yyyy-MM-dd' /></td>
-                        <td class="client_title">${client.title}</td>
+                        <td class="client_title">${client.company_name}</td>
                         <td class="client_action"><a href="<c:url value='/clients/show?id=${client.id}' />">詳細を見る</a></td>
                     </tr>
                 </c:forEach>

@@ -19,7 +19,7 @@
 <br /><br />
 
 <label for="title">会社名</label><br />
-<input type="text" name="title" value="${client.company_name}" />
+<input type="text" name="company_name" value="${client.company_name}" />
 <br /><br />
 
 <label for="content">商談内容</label><br />

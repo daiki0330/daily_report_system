@@ -39,7 +39,7 @@
                 </table>
 
                 <c:if test="${sessionScope.login_employee.id == client.employee.id}">
-                    <p><a href="<c:url value="/clients/edit?id=${client.id}" />">この日報を編集する</a></p>
+                    <p><a href="<c:url value="/clients/edit?id=${client.id}" />">この顧客管理を編集する</a></p>
                 </c:if>
             </c:when>
             <c:otherwise>

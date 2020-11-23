@@ -54,6 +54,7 @@ public class ClientsCreateServlet extends HttpServlet {
 
             c.setCompany_name(request.getParameter("company_name"));
             c.setContent(request.getParameter("content"));
+            c.setStatus_flag(Integer.parseInt(request.getParameter("status_flag")));
 
             Timestamp currentTime = new Timestamp(System.currentTimeMillis());
             c.setCreated_at(currentTime);
